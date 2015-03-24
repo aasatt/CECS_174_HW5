@@ -20,7 +20,7 @@ public class LineSegments {
 
 class CurveComponent extends JComponent {
 	/**
-	 * This will draw the traffic light
+	 * This will draw the curve
 	 */
 	private static final long serialVersionUID = 1L;
 
