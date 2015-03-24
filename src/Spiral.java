@@ -11,7 +11,7 @@ public class Spiral {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		frame.setSize(600, 625);
-		frame.setTitle("Traffic Light");
+		frame.setTitle("Spiral");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		SpiralComponent comp = new SpiralComponent();
 		frame.add(comp);
@@ -21,7 +21,7 @@ public class Spiral {
 
 class SpiralComponent extends JComponent {
 	/**
-	 * This will draw the traffic light
+	 * This will draw the spiral
 	 */
 	private static final long serialVersionUID = 1L;
 
