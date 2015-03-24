@@ -71,5 +71,68 @@ public class ArrayMethods {
 			System.out.println("e. "+Arrays.toString(temp));
 		}
 	}
-	
+	public void evenToFront() {
+		int[] temp = Arrays.copyOf(values, values.length);
+		int evenCount = 0;
+		int oddCount = 0;
+		for (int i = 0; i<temp.length; i++) {
+			if (values[i]%2==0) {
+				temp[evenCount] = values[i];
+				evenCount++;
+			}
+		}
+		for (int i = 0; i<temp.length; i++) {
+			if (values[i]%2!=0) {
+				temp[evenCount+oddCount] = values[i];
+				oddCount++;
+			}
+		}
+		
+		System.out.println("f. "+Arrays.toString(temp));
+	}
+	public int secondLargest() {
+		int secondLargest = values[0];
+		int largest =  values[0];
+		for (int i = 0; i<values.length; i++) {
+			if (values[i]>largest) {
+				largest = values[i];
+			}
+		}
+		int start=0;
+		if ((int)largest == (int)values[0])
+			secondLargest = values[1];
+		
+		for (int i = start; i<values.length; i++) {
+			if ((values[i]!=(int)largest)) {
+				if (values[i]>secondLargest)
+				secondLargest = values[i];
+			}
+		}
+		return secondLargest;
+	}
+	public boolean increasing() {
+		for (int i = 0; i<values.length-1; i++) {
+			if (!(values[i]<=values[i+1]))
+				return false;
+			
+		}	
+		return true;
+	}
+	public boolean adjDuplicate() {
+		for (int i = 0; i<values.length-1; i++) {
+			if ((values[i]==values[i+1]))
+				return true;
+			
+		}	
+		return false;
+	}
+	public boolean duplicate() {
+		for (int i = 0; i<values.length-1; i++) {
+			for (int j = i+1; j<values.length; j++)
+			if ((values[i]==values[j]))
+				return true;
+			
+		}	
+		return false;
+	}
 }

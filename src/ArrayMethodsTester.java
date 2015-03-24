@@ -21,6 +21,11 @@ public class ArrayMethodsTester {
 		aM.evenToZero();
 		aM.neighborsReplace();
 		aM.middleReplace();
+		aM.evenToFront();
+		System.out.println("g. Second Largest: "+aM.secondLargest());
+		System.out.println("h. Increasing? "+aM.increasing());
+		System.out.println("i. Adjacent Duplicate? "+aM.adjDuplicate());
+		System.out.println("j. Duplicate? "+aM.duplicate());
 	}
 	
 }
